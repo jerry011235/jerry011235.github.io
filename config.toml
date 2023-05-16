@@ -1,11 +1,11 @@
-title = "璀璨星空"
-baseURL = 'https://jerry011235.github.io/index.html'
+title = "星空"
+baseURL = 'https://jerry011235.github.io/'
 languageCode = 'en-us'
 theme = "hugo-blog-awesome"
 
 # To enable Google Analytics 4 (gtag.js) provide G-MEASUREMENT_ID below.
 # To disable  Google Analytics, simply leave the field empty or remove the next line
-#googleAnalytics = '' # G-MEASUREMENT_ID
+# googleAnalytics = '' # G-MEASUREMENT_ID
 
 
 # Enable emojis globally
@@ -37,31 +37,26 @@ enableEmoji = true
     url = '/about/'
     weight = 30
 
-
 [params]
-  sitename = "璀璨星空"
-  defaultColor = "light" # set default color mode: dark or light
-  description = "Minimal Hugo blog theme with light and dark mode support"
+  sitename = "星空"
+  defaultColor = "dark" 
+  description = "方寸净土"
 
 [params.author]
-  avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
+  avatar = "avatar_rhino.png" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Debanwita Mahato"
-  name = "Debanwita Mahato"
-  description = "CS undergrad trying to get a foothold in Web Dev and Machine Learning(and Deep Learning). I dabble in generative coding for the kicks. Currently looking for an interesting opportunity for a summer/autumn internship."
+  intro = "星空"
+  name = "Aries"
+  description = "飯疏食，飲水，曲肱而枕之，樂亦在其中矣。"
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/debanwita27"
+url = "https://github.com/jerry011235"
+
+#[[params.socialIcons]]
+#name = "twitter"
+#url = "https://twitter.com"
 
 [[params.socialIcons]]
-name = "linkedin"
-url = "http://www.linkedin.com/in/debanwita-mahato-8779431b8/"
-
-[[params.socialIcons]]
-name = "leetcode"
-url = "https://www.leetcode.com/dm2711/"
-
-[[params.socialIcons]]
-name = "email"
-url = "mailto:debanwita27@gmail.com"
+name = "Rss"
+url = "index.xml"
