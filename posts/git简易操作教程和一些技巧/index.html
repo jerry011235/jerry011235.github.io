@@ -1,0 +1,117 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=content-type content="text/html"><meta name=viewport content="width=device-width,initial-scale=1"><title itemprop=name>Git简易操作教程和一些技巧 | 璀璨星空的博客</title><meta property="og:title" content="Git简易操作教程和一些技巧 | 璀璨星空的博客"><meta name=twitter:title content="Git简易操作教程和一些技巧 | 璀璨星空的博客"><meta itemprop=name content="Git简易操作教程和一些技巧 | 璀璨星空的博客"><meta name=application-name content="Git简易操作教程和一些技巧 | 璀璨星空的博客"><meta property="og:site_name" content="璀璨星空的博客"><meta name=description content="Minimal Hugo blog theme with light and dark mode support"><meta itemprop=description content="Minimal Hugo blog theme with light and dark mode support"><meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support"><meta name=twitter:description content="Minimal Hugo blog theme with light and dark mode support"><meta property="og:locale" content="en-us"><meta name=language content="en-us"><meta itemprop=image content="https://jerry011235.github.io/"><meta property="og:image" content="https://jerry011235.github.io/"><meta name=twitter:image content="https://jerry011235.github.io/"><meta name=twitter:image:src content="https://jerry011235.github.io/"><meta property="og:type" content="article"><meta property="og:article:published_time" content="2016-01-08T23:36:50Z"><meta property="article:published_time" content="2016-01-08T23:36:50Z"><script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"Git简易操作教程和一些技巧","author":{"@type":"Person","name":""},"datePublished":"2016-01-08","description":"","wordCount":782,"mainEntityOfPage":"True","dateModified":"2016-01-08","image":{"@type":"imageObject","url":""},"publisher":{"@type":"Organization","name":"璀璨星空的博客"}}</script><meta name=generator content="Hugo 0.110.0"><link rel=canonical href=https://jerry011235.github.io/posts/git%E7%AE%80%E6%98%93%E6%93%8D%E4%BD%9C%E6%95%99%E7%A8%8B%E5%92%8C%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7/><link href=/style.min.aa9470815b4b52c5601f30197bee98e78eda8669105f05560f16bb4ac8f96a59.css rel=stylesheet><link rel=apple-touch-icon sizes=180x180 href=/icons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/icons/favicon-16x16.png><link rel=mask-icon href=/icons/safari-pinned-tab.svg><link rel="shortcut icon" href=/favicon.ico><link rel=manifest href=https://jerry011235.github.io/site.webmanifest><meta name=msapplication-config content="/browserconfig.xml"><meta name=msapplication-TileColor content="#2d89ef"><meta name=theme-color content="#434648"><link rel=icon type=image/svg+xml href=/icons/favicon.svg></head><body data-theme=light class=notransition><script src=/js/themeLoader.min.4e9e1a253d543bbfec02e7f2460d9621e719fd739dc8a5256faa91cda6e12e03.js></script><div class=navbar role=navigation><nav class=menu aria-label="Main Navigation"><a href=https://jerry011235.github.io/ class=logo><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><title>Home</title><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></a><input type=checkbox id=menu-trigger class=menu-trigger>
+<label for=menu-trigger><span class=menu-icon><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentcolor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7H3.40726"/><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488H3.49301"/><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"/><path stroke-linecap="round" stroke-linejoin="round" d="M.5 12.5V1.5c0-.552285.447715-1 1-1h11C13.0523.5 13.5.947715 13.5 1.5v11C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C.947715 13.5.5 13.0523.5 12.5z"/></svg></span></label><div class=trigger><ul class=trigger-container><li><a class=menu-link href=/>Home</a></li><li><a class="menu-link active" href=/posts/>Posts</a></li><li><a class=menu-link href=/pages/about/>About</a></li><li class=menu-separator><span>|</span></li></ul><a id=mode href=#><svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1"><title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1=".5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1=".5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg><svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1"><title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1=".5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1=".5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a></div></nav></div><div class="wrapper post"><main class=page-content aria-label=Content><article><header class=header><h1 class=header-title>Git简易操作教程和一些技巧</h1><div class=post-meta><time datetime=2016-01-08T23:36:50+00:00 itemprop=datePublished>8 Jan 2016</time></div></header><details class=toc><summary><b>Table of Contents</b></summary><nav id=TableOfContents><ul><li><a href=#快捷键>快捷键</a></li><li><a href=#git-add--a-and-git-add-的区别>“Git add -A” and “Git add .”的区别</a></li></ul></nav></details><div class=page-content><p>这是一篇在windows平台使用git上传本地代码并同步到github远程仓库的简易教程。
+环境：windows7 32位，Git-1.9.5-preview20150319.exe</p><h1 id=创建github远程仓库>创建github远程仓库</h1><p>先注册<a href=https://github.com>github</a>账号，登录后，点击右上角头像旁边的<code>+</code>号下拉菜单按钮，选择<code>New repository</code>，然后<code>Repository name</code>下方就是仓库的名字，我们这里输入<code>test</code>，然后下方的<code>Public</code>保持勾选，然后点击勾选下面的<code>Initialize this repository with a README</code>,如果你喜欢，可以点击<code>Add a license:</code>来增加一个许可证，我们这里选择<code>GNU Lesser General Public License v3.0</code>，最后点击绿底白字的<code>Creating repository</code>完成创建。</p><p>创建后页面自动跳转到你的仓库地址，比如我的就是<a href=https://github.com/jerry011235/test>https://github.com/jerry011235/test</a>，然后复制<code>HTTPS</code>右侧的网址：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>https://github.com/jerry011235/test.git
+</span></span></code></pre></div><h1 id=本地克隆>本地克隆</h1><p>在D盘根目录或一个你喜欢的文件夹（推荐路径全部为英文），右键选择<code>Git Bash</code>,输入：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git clone https://github.com/jerry011235/test.git
+</span></span></code></pre></div><p>回车后，会发现D盘根目录多了一个test文件夹，里面和github网页上的文件是一样的（包括一个<code>LICENSE</code>文件和一个<code>README.md</code>文件），最重要的是多了一个<code>.git</code>隐藏文件夹。这个test文件夹就是你的本地工作目录。
+<strong>然后关闭gitbash窗口。</strong></p><p>然后把要上传到github的文件粘贴到test文件夹里（或者新建几个文件夹和文件）。然后进入<code>D:\test</code>文件夹，右键选择<code>Git Bash</code>,会发现变成master了，即<code>/D/test (master)</code>，然后<strong>依次</strong>输入：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git add -A      
+</span></span><span style=display:flex><span>//它会把我们的新文件和修改的文件全部提交到stage区域（当然不包括本地删除的文件）
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#39;我的第一个提交&#39;</span>
+</span></span><span style=display:flex><span>// 提交更新
+</span></span><span style=display:flex><span>git push origin master
+</span></span><span style=display:flex><span>// push到远端master上
+</span></span></code></pre></div><p><strong>注意：这三个命令是连续动作，必须依次执行，才能成功。</strong>
+如果要把<code>git add</code>和<code>git commit</code>以及<code>git push</code>合并成一步命令，可以使用下面的代码：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git add -A <span style=color:#f92672>&amp;&amp;</span> git commit -m <span style=color:#e6db74>&#39;你的注释&#39;</span> <span style=color:#f92672>&amp;&amp;</span> git push origin master
+</span></span></code></pre></div><p>等命令运行完后，刷新<a href=https://github.com/jerry011235/test>https://github.com/jerry011235/test</a>，会发现本地的文件全部都上传到github远程仓库上了。</p><h1 id=本地目录和远程仓库进行文件同步>本地目录和远程仓库进行文件同步</h1><p>然后我们进行文件和文件夹的修改操作，就是看看修改后的本地目录能否和github同步（目录里的文件和文件夹一模一样）。
+我们先在<a href=https://josetomastocino.github.io/mindmapit>https://josetomastocino.github.io/mindmapit/</a>上画一个文件和文件夹修改操作的思维导图。
+<img src=https://i.ibb.co/N9GBtnx/Git.png alt=文件和文件夹的操作></p><p><strong>小技巧：搜索<code>(online) mindmap (github.io)</code>会出来更多的在线思维导图（括号里的单词可加可不加）：</strong></p><ul><li><a href=http://mindmap.4ye.me/br57Govl>http://mindmap.4ye.me/br57Govl</a></li><li><a href=https://hizzgdev.github.io/jsmind/developer.html>jsMind</a></li><li><a href=http://mofas.github.io/mindMap/dist/index.html>http://mofas.github.io/mindMap/dist/index.html</a></li><li><a href=https://www.text2mindmap.com/>https://www.text2mindmap.com/</a></li><li><a href=https://kampfer.github.io/mindMap/client/index.html>https://kampfer.github.io/mindMap/client/index.html</a></li><li><a href=http://my-mind.github.io/>http://my-mind.github.io/</a></li></ul><p>接着我们就开始在工作目录<code>D:\test</code>文件夹里面进行增加和删除文件和文件夹、修改文件内容和文件名等操作。
+经过测试，这行代码完全可以把本地目录的文件同步到github远程仓库。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git add -A <span style=color:#f92672>&amp;&amp;</span> git commit -m <span style=color:#e6db74>&#39;你的注释&#39;</span> <span style=color:#f92672>&amp;&amp;</span> git push origin master
+</span></span></code></pre></div><p><strong>但注意：本地新建一个空文件夹并不会被同步到github远程仓库上。</strong></p><h1 id=查看文件版本的历史纪录>查看文件版本的历史纪录</h1><p>你可以在<a href=https://github.com/jerry011235/test>https://github.com/jerry011235/test</a>页面中点击<code>commits</code>链接来查看<a href=https://github.com/jerry011235/test/commits/master>提交更新的历史纪录</a>，
+然后点击<code>&lt;></code>还可以查看当时的文件，一直点击打开文件后，对着<code>Raw</code>右键，选择<code>链接另存为</code>还可以下载该版本的文件。
+<img src=https://i.ibb.co/9v0gT9P/Git-raw.png alt=github下载文件>
+以后就可以上传一些word文档来进行版本控制，而因为github地址是公开的，任何人打开就能看到，所以就上传一些可以公开的文档。
+下面这样的日子就一去不复返了：）
+<img src=http://ww3.sinaimg.cn/large/5f7e4f3ejw1ezvybehvd7j207k08cgm5.jpg alt=以前的版本控制></p><h1 id=gitbash小技巧>Gitbash小技巧</h1><h2 id=快捷键>快捷键</h2><ol><li>按方向键<code>↑</code>（上键）可以显示上一条命令，<code>Ctrl + p</code>也有同样效果。</li><li>Ctrl + c可以终止命令。</li></ol><p>更多快捷键可以参考附录或搜索<code>Bash Shell 快捷键</code>来得到更多信息。</p><h2 id=git-add--a-and-git-add-的区别>“Git add -A” and “Git add .”的区别</h2><p>上述代码为什么要用<code>git add -A</code>而不用<code>git add .</code>，因为</p><ul><li><code>git add -A</code> :stages All</li><li><code>git add .</code> :stages new and modified, without deleted</li><li><code>git add -u</code> :stages modified and deleted, without new</li></ul><table><thead><tr><th>Git add操作</th><th>对应的提交操作</th></tr></thead><tbody><tr><td><code>git add -A</code></td><td>stages All</td></tr><tr><td><code>git add .</code></td><td>stages new and modified, without deleted</td></tr><tr><td><code>git add -u</code></td><td>stages modified and deleted, without new</td></tr><tr><td>Git Version 1.X：</td><td></td></tr><tr><td><img src=http://i.stack.imgur.com/YfLUZ.jpg alt="Git Version 1.X "></td><td></td></tr><tr><td>Git Version 2.X：</td><td></td></tr><tr><td><img src=http://i.stack.imgur.com/KwOLu.jpg alt="Git Version 2.X "></td><td></td></tr></tbody></table><p>来自：<a href=http://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add>http://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add</a></p><h1 id=附录bash-shell-快捷键>附录：Bash Shell 快捷键</h1><blockquote><p>Bash Shell 快捷键（转载自：<a href=https://www.cnblogs.com/include/archive/2011/12/31/2308313.html>天晴如许的博客</a>）</p></blockquote><blockquote><p>【CTRL 键】
+Ctrl + a – Jump to the start of the line
+Ctrl + b – Move back a char
+Ctrl + c – Terminate the command //用的最多了吧?
+Ctrl + d – Delete from under the cursor
+Ctrl + e – Jump to the end of the line
+Ctrl + f – Move forward a char
+Ctrl + k – Delete to EOL
+Ctrl + l – Clear the screen //清屏，类似 clear 命令
+Ctrl + r – Search the history backwards //查找历史命令
+Ctrl + R – Search the history backwards with multi occurrence
+Ctrl + u – Delete backward from cursor // 密码输入错误的时候比较有用
+Ctrl + xx – Move between EOL and current cursor position
+Ctrl + x @ – Show possible hostname completions
+Ctrl + z – Suspend/ Stop the command</p></blockquote><p>【补充:】
+Ctrl + h – 删除当前字符
+Ctrl + w – 删除最后输入的单词</p><p>【ALT 键】
+平时很少用。有些和远程登陆工具冲突。
+Alt + &lt; - Move to the first line in the history
+Alt + > – Move to the last line in the history
+Alt + ? – Show current completion list
+Alt + * – Insert all possible completions
+Alt + / – Attempt to complete filename
+Alt + . – Yank last argument to previous command
+Alt + b – Move backward
+Alt + c – Capitalize the word
+Alt + d – Delete word
+Alt + f – Move forward
+Alt + l – Make word lowercase
+Alt + n – Search the history forwards non-incremental
+Alt + p – Search the history backwards non-incremental
+Alt + r – Recall command
+Alt + t – Move words around
+Alt + u – Make word uppercase
+Alt + back-space – Delete backward from cursor
+// SecureCRT 如果没有配置好，这个就很管用了。</p><p>【其他特定的键绑定:】
+输入 bind -P 可以查看所有的键盘绑定。这一系列我觉得更为实用。
+Here “2T” means Press TAB twice
+$ 2T – All available commands(common) //命令行补全，我认为是 Bash 最好用的一点
+$ (string)2T – All available commands starting with (string)
+$ /2T – Entire directory structure including Hidden one
+$ ./2T – Only Sub Dirs inside including Hidden one
+$ *2T – Only Sub Dirs inside without Hidden one
+$ ~2T – All Present Users on system from “/etc/passwd” //第一次见到，很好用
+$ $2T – All Sys variables //写Shell脚本的时候很实用
+$ @2T – Entries from “/etc/hosts” //第一次见到
+$ =2T – Output like ls or dir //好像还不如 ls 快捷</p><p>Esc + T – 交换光标前面的两个单词</p><p>【命令行历史】
+history 显示命令历史列表
+↑(Ctrl p) 显示上一条命令
+↓(Ctrl n) 显示下一条命令
+!num 执行命令历史列表的第num条命令
+!! 执行上一条命令
+!?string? 执行含有string字符串的最新命令
+Ctrl + r - 然后输入若干字符，开始向上搜索包含该字符的命令，继续按Ctrl r，搜索上一条匹配的命令
+Ctrl + s - 与Ctrl + 类似,只是正向检索
+Alt + &lt; - 历史列表第一项
+Alt + > - 历史列表最后一项
+ls !$ 执行命令ls，并以上一条命令的参数为其参数</p><p>【命令行编辑】
+Ctrl + u - 剪切命令行中光标所在处之前的所有字符（不包括自身）
+Ctrl + k - 剪切命令行中光标所在处之后的所有字符（包括自身）
+Ctrl + a - 移动到当前行的开头
+Ctrl + e - 移动到当前行的结尾
+Ctrl + d - 删除光标所在处字符
+Ctrl + h - 删除光标所在处前一个字符
+Ctrl + y - 粘贴刚才所删除的字符
+Ctrl + c - 删除整行
+Ctrl + (x u) - 按住Ctrl的同时再先后按x和u，撤销刚才的操作
+Ctrl + w - 剪切光标所在处之前的一个词（以空格、标点等为分隔符）
+Alt + d - 剪切光标之后的词
+Ctrl + f - 光标向前移动一个字符,相当与->
+Ctrl + b - 光标向后移动一个字符,相当与&lt;-
+Alt + f - 光标向前移动一个单词
+Alt + b - 光标向后移动一个单词
+Esc + f - 移动到当前单词的结尾
+Esc + b - 移动到当前单词的开头
+Ctrl + t - 颠倒光标所在处及其之前的字符位置，并将光标移动到下一个字符
+Alt + t - 交换当前与以前单词的位置
+Esc + t - 颠倒光标所在处及其相邻单词的位置
+Alt + u - 把当前词转化为大写
+Alt + l - 把当前词转化为小写
+Alt + c - 把当前词汇变成首字符大写
+Ctrl + v - 插入非凡字符,如Ctrl v Tab加入Tab字符键
+alt + . — 插入最有输入的命令。
+alt + b — 光标移动到前一个单词处。
+Esc + w - 删除光标所在处之前的字符至其单词尾（以空格、标点等为分隔符）</p><p>【控制】
+Ctrl + l - 清屏
+ctrl + c — 终止当前命令或进程。
+ctrl + d — 终止shell。
+ctrl + z — 将进程放入后台，可以用fg命令将放入后台的命令调入前台。
+Ctrl + s - 挂起当前shell
+Ctrl + q - 重新启用挂起的shell
+shell(bash)命令行快捷方式</p></div></article></main></div><footer class=footer><span class=footer_item></span>&nbsp;<div class=footer_social-icons><a href=https://github.com/jerry011235 target=_blank rel="noopener noreferrer me" title=Github><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a><a href=index.xml target=_blank rel="noopener noreferrer me" title=Rss><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a></div><small class=footer_copyright>© 2023 璀璨星空.
+Powered by <a href=https://github.com/hugo-sid/hugo-blog-awesome target=_blank rel="noreferrer noopener">Hugo blog awesome</a>
+theme on
+<a href=https://gohugo.io target=_blank rel="noreferrer noopener">Hugo</a>.</small></footer><a title="Go to top" id=totop><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentcolor" stroke="currentcolor" viewBox="0 96 960 960"><path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197z"/></svg></a><script src=https://jerry011235.github.io/js/script.min.c5d4546c3fd548e01f095ec4b674b07d4d73989452625208f683acce2684116c.js integrity="sha256-xdRUbD/VSOAfCV7EtnSwfU1zmJRSYlII9oOsziaEEWw="></script></body></html>

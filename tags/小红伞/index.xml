@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>小红伞 on 璀璨星空的博客</title><link>https://jerry011235.github.io/tags/%E5%B0%8F%E7%BA%A2%E4%BC%9E/</link><description>Recent content in 小红伞 on 璀璨星空的博客</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 Jul 2015 22:58:16 +0000</lastBuildDate><atom:link href="https://jerry011235.github.io/tags/%E5%B0%8F%E7%BA%A2%E4%BC%9E/index.xml" rel="self" type="application/rss+xml"/><item><title>移除小红伞开机的广告弹窗</title><link>https://jerry011235.github.io/posts/%E7%A7%BB%E9%99%A4%E5%B0%8F%E7%BA%A2%E4%BC%9E%E5%BC%80%E6%9C%BA%E7%9A%84%E5%B9%BF%E5%91%8A%E5%BC%B9%E7%AA%97/</link><pubDate>Wed, 01 Jul 2015 22:58:16 +0000</pubDate><guid>https://jerry011235.github.io/posts/%E7%A7%BB%E9%99%A4%E5%B0%8F%E7%BA%A2%E4%BC%9E%E5%BC%80%E6%9C%BA%E7%9A%84%E5%B9%BF%E5%91%8A%E5%BC%B9%E7%AA%97/</guid><description>&lt;p>众所周知,小红伞（Avira）这款杀毒软件对个人用户是免费的，但是在开机启动后桌面右下角老是弹出升级的广告，有点恼人，搜索了一番后，找到了屏蔽的办法。&lt;/p>
+&lt;p>2015-9-13更新：
+右键&lt;code>avnotify.exe&lt;/code>和&lt;code>ipmgui.exe&lt;/code>，属性，兼容性，以兼容模式运行这个程序，选择最老的windows版本即&lt;code>Windows 95&lt;/code>，确定即可。
+再结合下面的软件限制策略就完美了。
+来自：&lt;a href="https://answers.avira.com/zh-cn/question/disable-avira-pop-up-ads-23018">Disable Avira Pop Up Ads&lt;/a>中&lt;code>Sonof abitch&lt;/code>提供的解决办法。&lt;/p>
+&lt;blockquote>
+&lt;p>I&amp;rsquo;ve tried this trick:
+Right click on both &amp;lsquo;ipmgui.exe&amp;rsquo; and &amp;lsquo;avnotify.exe&amp;rsquo; in &amp;lsquo;Avira/Antivirus&amp;rsquo; folder.
+Select &amp;lsquo;Properties/Compatibility/Run this program in compatibility mode for Windows 95 (the oldest version I found)&amp;rsquo;.
+Restart and see what happens. No annoyng notifications so far. I will tell you if it works permanently.
+Bye!&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>使用bgpkiller_v0.91小红弹出广告屏蔽工具，添加一个快捷方式到&lt;code>开始&amp;gt;所有程序&amp;gt;启动&lt;/code>里。
+&lt;a href="http://bgpkiller.weebly.com">下载地址点我&lt;/a>&lt;/li>
+&lt;li>用U盘进入winPE，把avnotify.exe改名。
+打开rufus v2.2（创建USB启动盘工具，绿色单文件），选择U盘，下方选iso系统为Win7PE-CN.iso，点击开始，创建好后重启系统，F12选择U盘启动（不同电脑可能按键不同），进入win7pe，然后进入&lt;code>C:\Program Files\Avira\AntiVir Desktop&lt;/code>找到&lt;code>avnotify.exe&lt;/code>和&lt;code>ipmgui.exe&lt;/code>并改名为：&lt;code>avnotify111.exe&lt;/code>和&lt;code>ipmgui.exe111&lt;/code>（或者其他名字）。改好后关机，重启系统即可。&lt;/li>
+&lt;/ol></description></item></channel></rss>

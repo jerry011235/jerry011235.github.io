@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>默认分类 on 璀璨星空的博客</title><link>https://jerry011235.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/</link><description>Recent content in 默认分类 on 璀璨星空的博客</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 May 2015 20:23:36 +0000</lastBuildDate><atom:link href="https://jerry011235.github.io/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>这是一篇测试博文</title><link>https://jerry011235.github.io/posts/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E6%96%87/</link><pubDate>Sat, 02 May 2015 20:23:36 +0000</pubDate><guid>https://jerry011235.github.io/posts/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87%E6%B5%8B%E8%AF%95%E5%8D%9A%E6%96%87/</guid><description>QQ空间图片外链： QQ邮箱记事本图片外链： 百度贴吧外链贴图测试：
+一级标题 正文：这是测试博文
+二级标题 一级标题 二级标题 二级标题 正文：这是测试博文
+三级标题 正文：这是测试博文
+四级标题 正文：这是测试博文
+五级标题 正文：这是测试博文
+六级标题 正文：这是测试博文哈❤❤ ❤ ♫♪ markdown字体变大，输入：
+&amp;lt;font size=6&amp;gt;我是变大的字&amp;lt;/font&amp;gt; 我是变大的字 我是4号字 我是5号字 我是7号字
+tips:
+冒号后面一定要有个空格,否则回报错。 所有文件（不管是以md为后缀的，还是以yml结尾的），都必须转换成UTF-8格式，可以在notepad++,格式里转换下。 tags: [test, 测试]如果使用多个标签，注意逗号和测试之间还有个空格。 哈哈啦啦
+$ hexo server $ hexo g $ hexo d</description></item></channel></rss>
